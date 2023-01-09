@@ -14,19 +14,14 @@ import javax.persistence.EntityManager;
 
 import static org.junit.Assert.*;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) //스프링과 함께 Test
 @SpringBootTest
 @Transactional //롤백
 public class MemberServiceTest {
 
-    @Autowired
-    MemberService memberService;
-
-    @Autowired
-    MemberRepository memberRepository;
-
-    @Autowired
-    EntityManager em;
+    @Autowired MemberService memberService;
+    @Autowired MemberRepository memberRepository;
+    @Autowired EntityManager em;
 
     @Test
     public void 회원가입() throws Exception{
